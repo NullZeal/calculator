@@ -1,3 +1,11 @@
+let display = document.getElementById('screen');
+display.textContent = '0';
+
+let storedValue = 0;
+
+const clearButton = document.getElementById('clear');
+clearButton.addEventListener('mouseup', () => clear());
+
 function add(a,b) {return a + b;}
 
 function substract(a,b){return a - b;}
@@ -14,18 +22,13 @@ function operate(operator, num1, num2){
 }
 
 function clear(){
-    currentStoredValue = 0;
-    currentDisplay = 0;
+    storedValue = 0;
+    display.textContent = '0';
 }
 
 function printNewNumberOnDisplay(newNumber){
-    currentDisplay.textContent += newNumber;
+    display.textContent += newNumber;
 }
-
-let currentDisplay = document.getElementById('screen');
-currentDisplay.textContent = '0';
-
-let currentStoredValue = 0;
 
 let ditgitButtons = document.querySelectorAll('.digit');
 for(let digit of ditgitButtons)
@@ -34,9 +37,9 @@ for(let digit of ditgitButtons)
 
     digit.addEventListener('mouseup', function()
         {
-            if (currentDisplay.textContent == '0') 
+            if (display.textContent == '0') 
             {
-                currentDisplay.textContent = '';
+                display.textContent = '';
                 printNewNumberOnDisplay(`${digit.textContent}`);
             }   
             else 
