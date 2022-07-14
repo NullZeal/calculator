@@ -20,6 +20,7 @@ equalsButton.addEventListener('mouseup', function(){
     mainDisplay.textContent = operationResult;
     operationsDisplay.textContent = '';
     stored.operator = '';
+    mustClearMainDisplay = true;
 })
 
 let operatorButtons = document.querySelectorAll('.operator');
@@ -52,8 +53,7 @@ for(let digit of digitButtons)
             if (mainDisplay.textContent == '0')
                 mainDisplay.textContent = '';
 
-            if (this.textContent == '.' && mainDisplay.textContent.indexOf('.') > -1 
-            || mainDisplay.textContent == '.'){
+            if (this.textContent == '.' && mainDisplay.textContent.indexOf('.') > -1){
                 return;
             }
 
