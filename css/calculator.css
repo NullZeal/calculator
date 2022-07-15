@@ -77,7 +77,7 @@ p{
 
 #operators{
     min-height: 220px;
-    justify-content:center;
+    justify-content:end;
     align-items:flex-end;
     flex-basis: 40%;
     flex-wrap: wrap;
@@ -94,7 +94,6 @@ p{
 }
 
 .digit{
-    width: 100px;
     flex-basis: 28%;
     flex-grow: 1;
 }
@@ -110,26 +109,17 @@ p{
     flex-basis: 100%;
 }
 #delete{
-    flex-grow:100;
+    flex-grow:1;
     background-color: rgb(233, 188, 90);
+    flex-basis: 28%;
 }
 @media screen and (max-width: 600px){
     #calculator{
         max-width: 80%;
     }
 
-    .digit, #clear, #equals, .operator{
-        height: 50px;
-    }
-
-    .digit{
-        width: 100px;
-        flex-basis: 29%;
-    }
-
-    #delete{
-        width: 100px;
-        flex-grow: 2;
+    .digit, #clear, #equals, .operator, #delete{
+        margin: 1px;
     }
 
     #screen, #operationsScreen{
@@ -140,7 +130,7 @@ p{
         width: 100%;
         font-size: 50px;
     }
-
+    
     #operators{
         flex-basis: 20%;
     }
@@ -171,7 +161,6 @@ p{
     }
 
     .digit{
-        width: 100px;
         flex-basis: 24%;
     }
     #screen, #operationsScreen{
