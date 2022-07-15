@@ -27,6 +27,12 @@ function deleteButton(){
 
 const equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('mouseup', function(){
+
+    if(stored.value == '' && mainDisplay.textContent == '0'
+    || mainDisplay.textContent == '0' && stored.operator == ''){
+        return;
+    } 
+
     let operationResult = operate(stored.operator, stored.value, mainDisplay.textContent);
     mainDisplay.textContent = operationResult;
     operationsDisplay.textContent = '';
