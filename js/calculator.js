@@ -39,6 +39,10 @@ for(let operator of operatorButtons)
 {
     operator.addEventListener('mouseup', () =>
         {
+            if(mainDisplay.textContent == 'Undefined'){
+                mainDisplay.textContent = '0';
+            }
+
             if(operationsDisplay.textContent == '')
             {
                 stored.operator = operator.textContent;
@@ -61,6 +65,9 @@ for(let digit of digitButtons)
 {
     digit.addEventListener('mouseup', function()
         {
+            if(mainDisplay.textContent == NaN){
+                mainDisplay.textContent == '';
+            }
             if (mainDisplay.textContent == '0')
                 mainDisplay.textContent = '';
 
@@ -93,7 +100,7 @@ function substract(a,b){return a - b;}
 
 function multiply(a,b){return a * b;}
 
-function divide(a,b){return a / b;}
+function divide(a,b){return(b == 0 ? 'Undefined' : a/b);}
 
 function operate(operator, num1, num2){
     if (operator == '+') {return add(Number(num1),Number(num2))}
@@ -101,5 +108,3 @@ function operate(operator, num1, num2){
     else if (operator == '*') {return multiply(Number(num1),Number(num2))}
     else if (operator == '/') {return divide(Number(num1),Number(num2))}
 }
-
-
