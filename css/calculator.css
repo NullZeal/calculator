@@ -38,12 +38,18 @@ p{
 }
 
 #screen, #operationsScreen{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: rgb(233, 188, 90);
-    text-align: center;
-    padding-top: 20px;
-    height: 50px;
     border-radius: 10px;
     width: 100%;
+    height: 50px;
+}
+
+.displayScreen{
+    vertical-align:bottom;
+    display: inline-block;
 }
 
 #screen{
@@ -116,14 +122,17 @@ p{
         flex-basis: 29%;
     }
 
+    #delete{
+        width: 100px;
+        flex-grow: 2;
+    }
+
     #screen, #operationsScreen{
         background-color: rgb(233, 188, 90);
         text-align: center;
         height: 50px;
         border-radius: 10px;
         width: 100%;
-        padding-top: 0px;
-        padding-bottom: 10px;
         font-size: 50px;
     }
 
@@ -166,7 +175,6 @@ p{
         height: 25px;
         border-radius: 10px;
         width: 100%;
-        padding-top: 10px;
     }
 
     #operators{

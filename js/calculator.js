@@ -5,10 +5,10 @@ let stored = {
     operator: '',
 }
 
-const operationsDisplay = document.getElementById('operationsScreen');
+const operationsDisplay = document.getElementById('operationScreen');
 operationsDisplay.textContent = '';
 
-const mainDisplay = document.getElementById('screen');
+const mainDisplay = document.getElementById('mainScreen');
 mainDisplay.textContent = '0';
 
 const clearButton = document.getElementById('clear');
