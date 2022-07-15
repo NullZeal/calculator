@@ -146,7 +146,7 @@ p{
 
     .digit, #clear, #equals, .operator, #deleteButton{
         margin: 1px;
-        height: 60px;
+        height: 65px;
     }
 
     #screen, #operationsScreen{
