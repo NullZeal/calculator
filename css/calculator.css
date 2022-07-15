@@ -63,6 +63,7 @@ p{
     justify-content:flex-start;
     align-items: center;
     text-align: center;
+    flex-wrap: wrap;
 }
 
 #digits, #operators{
@@ -132,20 +133,23 @@ p{
     }
     
     #operators{
-        flex-basis: 20%;
+        flex-basis: 100%;
     }
 
     #digits{
-        flex-basis: 80%;
+        flex-basis: 100%;
         align-self: flex-start;
     }
 
     .operator{
-        flex-basis: 100%;
+        flex-basis: 30%;
     }
 
     body{
         font-size: 16px;
+    }
+    #clear, #equals{
+        flex-basis: 30%;
     }
 }
 
@@ -156,7 +160,10 @@ p{
         padding-bottom: 0px;
     }
 
-    .digit, #clear, #equals, .operator{
+#digits{
+    flex-basis: 55%;
+}
+    .digit, #clear, #equals, .operator, #delete{
         height: 50px;
     }
 
@@ -171,10 +178,6 @@ p{
         width: 100%;
     }
 
-    #operators{
-        flex-basis: 100%;
-    }
-
     body{
         font-size: 16px;
     }
@@ -185,6 +188,11 @@ p{
     }
 
     #calculator{
-        margin-top: 5px;
+        margin-top: 2%;
+        width: 80%;
+    }
+
+    #calculatorPanel{
+        width: 100%;
     }
 }
