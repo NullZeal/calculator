@@ -14,7 +14,7 @@ mainDisplay.textContent = '0';
 const clearButton = document.getElementById('clear');
 clearButton.addEventListener('mouseup', () => clear());
 
-const delButton = document.getElementById('delete');
+const delButton = document.getElementById('deleteButton');
 delButton.addEventListener('mouseup', () => deleteButton());
 
 function deleteButton(){
