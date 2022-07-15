@@ -14,6 +14,17 @@ mainDisplay.textContent = '0';
 const clearButton = document.getElementById('clear');
 clearButton.addEventListener('mouseup', () => clear());
 
+const delButton = document.getElementById('delete');
+delButton.addEventListener('mouseup', () => deleteButton());
+
+function deleteButton(){
+    if(mainDisplay.textContent.length <= 1){
+        mainDisplay.textContent = 0;
+        return;
+    }
+    mainDisplay.textContent = mainDisplay.textContent.substring(0,mainDisplay.textContent.length-1);
+}
+
 const equalsButton = document.getElementById('equals');
 equalsButton.addEventListener('mouseup', function(){
     let operationResult = operate(stored.operator, stored.value, mainDisplay.textContent);
