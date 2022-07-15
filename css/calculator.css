@@ -6,7 +6,6 @@ body{
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    color: rgb(32, 31, 31);
     width:100vw;
     height: 100vh;
 }
@@ -110,7 +109,7 @@ p{
 }
 
 #clear, #equals{
-    background-color: rgb(243, 233, 233);
+    background-color: rgb(176, 116, 116);
     flex-basis: 100%;
 }
 #deleteButton{
