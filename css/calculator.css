@@ -242,4 +242,8 @@ p{
     #calculatorPanel{
         width: 100%;
     }
+
+    #operationsScreen{
+        margin-bottom:10px;
+    }
 }
